@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tecmis.AdminCtrl">
+   <children>
+      <Pane fx:id="noticesettingpane" layoutY="-1.0" prefHeight="800.0" prefWidth="1400.0" styleClass="root" stylesheets="@admin.css">
+         <children>
+            <Pane layoutX="10.0" layoutY="14.0" prefHeight="770.0" prefWidth="234.0" styleClass="dash_pane" stylesheets="@admin.css">
+               <children>
+                  <Button layoutX="78.0" layoutY="659.0" mnemonicParsing="false" onAction="#noticetodash" prefHeight="64.0" prefWidth="77.0" style="-fx-background-color: 20,147,233;" textFill="#1493e9">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/back-button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane id="dash_prof" fx:id="accountsettingspane12" layoutX="254.0" layoutY="12.0" prefHeight="770.0" prefWidth="1138.0" styleClass="dash_pane" stylesheets="@admin.css">
+               <children>
+                  <Pane fx:id="noticepane" layoutX="14.0" layoutY="15.0" prefHeight="742.0" prefWidth="1106.0" styleClass="root" stylesheets="@admin.css">
+                     <children>
+                        <Label layoutX="459.0" layoutY="36.0" prefHeight="34.0" prefWidth="334.0" text="Notice Settings">
+                           <font>
+                              <Font name="System Bold Italic" size="29.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.19181287288665771" green="0.5069785714149475" blue="0.6315789222717285" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="163.0" layoutY="479.0" prefHeight="29.0" prefWidth="126.0" text="Notice Header" textFill="WHITE" />
+                        <Label layoutX="163.0" layoutY="554.0" prefHeight="29.0" prefWidth="122.0" text="Notice Description" textFill="WHITE" />
+                        <TextField fx:id="nhead" layoutX="306.0" layoutY="481.0" prefHeight="25.0" prefWidth="403.0" />
+                        <Button layoutX="870.0" layoutY="481.0" mnemonicParsing="false" onAction="#addnbtn" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #4ca0c2;" text="Add Notice" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="adminupdateaccount113" layoutX="870.0" layoutY="542.0" mnemonicParsing="false" onAction="#editnbtn" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #4ca0c2;" text="Edit Notice" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="admindeleteaccount113" layoutX="870.0" layoutY="612.0" mnemonicParsing="false" onAction="#deletenbtn" style="-fx-background-color: #4ca0c2;" text="Delete Notice" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="noticetable" layoutX="78.0" layoutY="111.0" prefHeight="333.0" prefWidth="963.0">
+                           <columns>
+                              <TableColumn fx:id="nidcol" prefWidth="91.199951171875" text="Notice ID" />
+                              <TableColumn fx:id="nheadercol" prefWidth="255.19992065429688" text="Notice Header" />
+                              <TableColumn fx:id="ndescol" prefWidth="462.4000244140625" text="Notice Description" />
+                              <TableColumn fx:id="ndatecol" prefWidth="154.39996337890625" text="Date/Time" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="870.0" layoutY="681.0" mnemonicParsing="false" onAction="#noticereset" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #4ca0c2;" text="Reset Text" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <TextArea fx:id="ndes" layoutX="306.0" layoutY="543.0" prefHeight="163.0" prefWidth="403.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="timetablesettingpane" layoutX="-1.0" prefHeight="800.0" prefWidth="1400.0" styleClass="root" stylesheets="@admin.css">
+         <children>
+            <Pane layoutX="10.0" layoutY="14.0" prefHeight="770.0" prefWidth="234.0" styleClass="dash_pane" stylesheets="@admin.css">
+               <children>
+                  <Button layoutX="78.0" layoutY="659.0" mnemonicParsing="false" onAction="#timetodash" prefHeight="64.0" prefWidth="77.0" style="-fx-background-color: 20,147,233;" textFill="#1493e9">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/back-button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane id="dash_prof" fx:id="accountsettingspane11" layoutX="254.0" layoutY="12.0" prefHeight="770.0" prefWidth="1138.0" styleClass="dash_pane" stylesheets="@admin.css">
+               <children>
+                  <Pane fx:id="timetablepane" layoutX="14.0" layoutY="15.0" prefHeight="742.0" prefWidth="1106.0" styleClass="root" stylesheets="@admin.css">
+                     <children>
+                        <Label layoutX="459.0" layoutY="34.0" prefHeight="34.0" prefWidth="334.0" text="Timetable Settings">
+                           <font>
+                              <Font name="System Bold Italic" size="29.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.19181287288665771" green="0.5069785714149475" blue="0.6315789222717285" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="34.0" layoutY="466.0" prefHeight="29.0" prefWidth="93.0" text="Course ID" textFill="WHITE" />
+                        <Label layoutX="32.0" layoutY="503.0" prefHeight="29.0" prefWidth="93.0" text="Lecturer Name" textFill="WHITE" />
+                        <Label layoutX="30.0" layoutY="543.0" prefHeight="29.0" prefWidth="98.0" text="Monday" textFill="WHITE" />
+                        <TextField fx:id="tid" layoutX="145.0" layoutY="468.0" prefHeight="25.0" prefWidth="377.0" />
+                        <TextField fx:id="tname" layoutX="145.0" layoutY="505.0" prefHeight="25.0" prefWidth="377.0" />
+                        <Button layoutX="145.0" layoutY="698.0" mnemonicParsing="false" onAction="#createtimebtn" style="-fx-background-color: #4ca0c2;" text="Create timetable" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="adminupdateaccount112" layoutX="405.0" layoutY="698.0" mnemonicParsing="false" onAction="#updatetimebtn" style="-fx-background-color: #4ca0c2;" text="Update Timetable" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="admindeleteaccount112" layoutX="693.0" layoutY="698.0" mnemonicParsing="false" onAction="#deletetimebtn" style="-fx-background-color: #4ca0c2;" text="Delete timetable" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="timetabletable" layoutX="33.0" layoutY="111.0" prefHeight="333.0" prefWidth="1037.0">
+                           <columns>
+                              <TableColumn fx:id="tidcol" prefWidth="95.20004272460938" text="Course ID" />
+                              <TableColumn fx:id="tnamecol" prefWidth="147.19998168945312" text="Lecturere Name" />
+                              <TableColumn fx:id="moncol" prefWidth="171.20001220703125" text="Monday" />
+                              <TableColumn fx:id="tuecol" prefWidth="157.5999755859375" text="Tuesday" />
+                              <TableColumn fx:id="wedcol" prefWidth="161.59991455078125" text="Wednesday" />
+                              <TableColumn fx:id="thucol" minWidth="0.0" prefWidth="159.2000732421875" text="Thursday" />
+                              <TableColumn fx:id="fricol" prefWidth="146.4000244140625" text="Friday" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="960.0" layoutY="698.0" mnemonicParsing="false" onAction="#timereset" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #4ca0c2;" text="Reset Text" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="30.0" layoutY="619.0" prefHeight="29.0" prefWidth="98.0" text="Tuesday" textFill="WHITE" />
+                        <TextArea fx:id="tmon" layoutX="145.0" layoutY="543.0" prefHeight="64.0" prefWidth="377.0" />
+                        <TextArea fx:id="tt" layoutX="145.0" layoutY="619.0" prefHeight="64.0" prefWidth="377.0" />
+                        <TextArea fx:id="tw" layoutX="693.0" layoutY="463.0" prefHeight="64.0" prefWidth="377.0" />
+                        <TextArea fx:id="tthu" layoutX="693.0" layoutY="543.0" prefHeight="64.0" prefWidth="377.0" />
+                        <TextArea fx:id="tf" layoutX="693.0" layoutY="625.0" prefHeight="64.0" prefWidth="377.0" />
+                        <Label layoutX="595.0" layoutY="466.0" prefHeight="29.0" prefWidth="98.0" text="Wednesday" textFill="WHITE" />
+                        <Label layoutX="595.0" layoutY="543.0" prefHeight="29.0" prefWidth="98.0" text="Thursday" textFill="WHITE" />
+                        <Label layoutX="600.0" layoutY="625.0" prefHeight="29.0" prefWidth="98.0" text="Friday" textFill="WHITE" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="coursesettingpane" layoutX="2.0" layoutY="2.0" prefHeight="800.0" prefWidth="1400.0" styleClass="root" stylesheets="@admin.css">
+         <children>
+            <Pane layoutX="10.0" layoutY="14.0" prefHeight="770.0" prefWidth="234.0" styleClass="dash_pane" stylesheets="@admin.css">
+               <children>
+                  <Button layoutX="78.0" layoutY="659.0" mnemonicParsing="false" onAction="#coursetodash" prefHeight="64.0" prefWidth="77.0" style="-fx-background-color: 20,147,233;" textFill="#1493e9">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/back-button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane id="dash_prof" fx:id="accountsettingspane1" layoutX="254.0" layoutY="12.0" prefHeight="770.0" prefWidth="1138.0" styleClass="dash_pane" stylesheets="@admin.css">
+               <children>
+                  <Pane fx:id="courseaccountpane" layoutX="14.0" layoutY="15.0" prefHeight="742.0" prefWidth="1106.0" styleClass="root" stylesheets="@admin.css">
+                     <children>
+                        <Label layoutX="459.0" layoutY="36.0" prefHeight="34.0" prefWidth="334.0" text="Course Settings">
+                           <font>
+                              <Font name="System Bold Italic" size="29.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.19181287288665771" green="0.5069785714149475" blue="0.6315789222717285" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="78.0" layoutY="502.0" prefHeight="29.0" prefWidth="211.0" text="Course ID" textFill="WHITE" />
+                        <Label layoutX="78.0" layoutY="557.0" prefHeight="29.0" prefWidth="211.0" text="Course Name" textFill="WHITE" />
+                        <Label layoutX="78.0" layoutY="609.0" prefHeight="29.0" prefWidth="211.0" text="Credits" textFill="WHITE" />
+                        <TextField fx:id="cid" layoutX="263.0" layoutY="504.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="cname" layoutX="263.0" layoutY="559.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="ccredit" layoutX="263.0" layoutY="611.0" prefHeight="25.0" prefWidth="259.0" />
+                        <Button layoutX="624.0" layoutY="478.0" mnemonicParsing="false" onAction="#createcoursebtn" style="-fx-background-color: #4ca0c2;" text="Create Course " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="adminupdateaccount11" layoutX="622.0" layoutY="530.0" mnemonicParsing="false" onAction="#updatecoursebtn" style="-fx-background-color: #4ca0c2;" text="Update Course" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="admindeleteaccount11" layoutX="626.0" layoutY="582.0" mnemonicParsing="false" onAction="#deletecoursebtn" style="-fx-background-color: #4ca0c2;" text="Delete course" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="coursetable" layoutX="200.0" layoutY="111.0" prefHeight="333.0" prefWidth="724.0">
+                           <columns>
+                              <TableColumn fx:id="cidcol" prefWidth="131.99996948242188" text="Course ID" />
+                              <TableColumn fx:id="cnamecol" prefWidth="428.00006103515625" text="Course Name" />
+                              <TableColumn fx:id="ccreditcol" prefWidth="164.00006103515625" text="Course Credits" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="626.0" layoutY="633.0" mnemonicParsing="false" onAction="#coursereset" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #4ca0c2;" text="Reset Text" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="profilesettingpane" prefHeight="800.0" prefWidth="1400.0" styleClass="root" stylesheets="@admin.css">
+         <children>
+            <Pane layoutX="10.0" layoutY="14.0" prefHeight="770.0" prefWidth="234.0" styleClass="dash_pane" stylesheets="@admin.css">
+               <children>
+                  <Button layoutX="12.0" layoutY="319.0" mnemonicParsing="false" onAction="#adminaccountsbtn" prefHeight="36.0" prefWidth="211.0" style="-fx-background-color: #020041;" text="Admin Accounts" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="techaccounts" layoutX="12.0" layoutY="385.0" mnemonicParsing="false" onAction="#toaccountsbtn" prefHeight="36.0" prefWidth="211.0" style="-fx-background-color: #020041;" text="Technical Officers Accounts" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button layoutX="12.0" layoutY="449.0" mnemonicParsing="false" onAction="#lecaccountsbtn" prefHeight="36.0" prefWidth="211.0" style="-fx-background-color: #020041;" text="Lecturer Accounts" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+                  <Button layoutX="12.0" layoutY="514.0" mnemonicParsing="false" onAction="#studentaccountsbtn" prefHeight="36.0" prefWidth="211.0" style="-fx-background-color: #020041;" text="Student Accounts" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Bell MT Bold" size="15.0" />
+                     </font></Button>
+                  <Button layoutX="78.0" layoutY="659.0" mnemonicParsing="false" onAction="#profiletodash" prefHeight="64.0" prefWidth="77.0" style="-fx-background-color: 20,147,233;" textFill="#1493e9">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/back-button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane id="dash_prof" fx:id="accountsettingspane" layoutX="254.0" layoutY="12.0" prefHeight="770.0" prefWidth="1138.0" styleClass="dash_pane" stylesheets="@admin.css">
+               <children>
+                  <Pane fx:id="studentaccountpane" layoutX="14.0" layoutY="14.0" prefHeight="742.0" prefWidth="1112.0" styleClass="root" stylesheets="@admin.css">
+                     <children>
+                        <Label layoutX="386.0" layoutY="36.0" prefHeight="43.0" prefWidth="348.0" text="Student Account Settings">
+                           <font>
+                              <Font name="System Bold Italic" size="29.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.19181287288665771" green="0.5069785714149475" blue="0.6315789222717285" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="78.0" layoutY="465.0" prefHeight="29.0" prefWidth="211.0" text="Student ID" textFill="WHITE" />
+                        <Label layoutX="78.0" layoutY="502.0" prefHeight="29.0" prefWidth="211.0" text="Studnet Name" textFill="WHITE" />
+                        <Label layoutX="78.0" layoutY="543.0" prefHeight="29.0" prefWidth="211.0" text="E-mail" textFill="WHITE" />
+                        <Label layoutX="78.0" layoutY="584.0" prefHeight="29.0" prefWidth="211.0" text="Password" textFill="WHITE" />
+                        <TextField fx:id="stid" layoutX="263.0" layoutY="467.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="stname" layoutX="263.0" layoutY="504.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="stmail" layoutX="263.0" layoutY="545.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="stpass" layoutX="263.0" layoutY="584.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="stcon" layoutX="263.0" layoutY="625.0" prefHeight="25.0" prefWidth="259.0" />
+                        <Label layoutX="78.0" layoutY="623.0" prefHeight="29.0" prefWidth="211.0" text="Contact" textFill="WHITE" />
+                        <Button layoutX="626.0" layoutY="490.0" mnemonicParsing="false" onAction="#createstbtn" prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #4ca0c2;" text="Create Student Account" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="adminupdateaccount12" layoutX="626.0" layoutY="545.0" mnemonicParsing="false" onAction="#updatestbtn" prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #4ca0c2;" text="Update Student Account" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="admindeleteaccount12" layoutX="626.0" layoutY="597.0" mnemonicParsing="false" onAction="#deletestbtn" prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #4ca0c2;" text="Delete Student Account" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="sttable" layoutX="78.0" layoutY="111.0" prefHeight="333.0" prefWidth="963.0">
+                           <columns>
+                              <TableColumn fx:id="stidcol" prefWidth="111.199951171875" text="Student ID" />
+                              <TableColumn fx:id="stnamecol" prefWidth="191.20001220703125" text="Student Name" />
+                              <TableColumn fx:id="stmailcol" prefWidth="235.199951171875" text="Student E_mail" />
+                              <TableColumn fx:id="stpasscol" minWidth="0.0" prefWidth="160.800048828125" text="Student Password" />
+                              <TableColumn fx:id="stconcol" prefWidth="143.2000732421875" text="Student Contact" />
+                              <TableColumn fx:id="stniccol" prefWidth="119.800048828125" text="Student NIC" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="626.0" layoutY="653.0" mnemonicParsing="false" onAction="#streset" prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #4ca0c2;" text="Reset Text" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="stnic" layoutX="263.0" layoutY="667.0" prefHeight="25.0" prefWidth="259.0" />
+                        <Label layoutX="78.0" layoutY="665.0" prefHeight="29.0" prefWidth="211.0" text="NIC" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="lecaccountpane" layoutX="17.0" layoutY="14.0" prefHeight="742.0" prefWidth="1106.0" styleClass="root" stylesheets="@admin.css">
+                     <children>
+                        <Label layoutX="437.0" layoutY="37.0" prefHeight="43.0" prefWidth="505.0" text="Lecturer Account Settings">
+                           <font>
+                              <Font name="System Bold Italic" size="29.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.19181287288665771" green="0.5069785714149475" blue="0.6315789222717285" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="78.0" layoutY="465.0" prefHeight="29.0" prefWidth="211.0" text="Lecture ID" textFill="WHITE" />
+                        <Label layoutX="78.0" layoutY="502.0" prefHeight="29.0" prefWidth="211.0" text="Lecture Name" textFill="WHITE" />
+                        <Label layoutX="78.0" layoutY="543.0" prefHeight="29.0" prefWidth="211.0" text="E-mail" textFill="WHITE" />
+                        <Label layoutX="78.0" layoutY="584.0" prefHeight="29.0" prefWidth="211.0" text="Password" textFill="WHITE" />
+                        <TextField fx:id="lecid" layoutX="263.0" layoutY="467.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="lecname" layoutX="263.0" layoutY="504.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="lecmail" layoutX="263.0" layoutY="545.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="lecpass" layoutX="263.0" layoutY="584.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="leccon" layoutX="263.0" layoutY="625.0" prefHeight="25.0" prefWidth="259.0" />
+                        <Label layoutX="78.0" layoutY="623.0" prefHeight="29.0" prefWidth="211.0" text="Contact" textFill="WHITE" />
+                        <Button layoutX="626.0" layoutY="467.0" mnemonicParsing="false" onAction="#createlecbtn" style="-fx-background-color: #4ca0c2;" text="Create Lecture Account" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="adminupdateaccount111" layoutX="624.0" layoutY="519.0" mnemonicParsing="false" onAction="#updatelecbtn" style="-fx-background-color: #4ca0c2;" text="Update Lecture Account" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="admindeleteaccount111" layoutX="626.0" layoutY="572.0" mnemonicParsing="false" onAction="#deletelecbtn" style="-fx-background-color: #4ca0c2;" text="Delete Lecture Account" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="lectable" layoutX="78.0" layoutY="111.0" prefHeight="333.0" prefWidth="963.0">
+                           <columns>
+                              <TableColumn fx:id="lecidcol" prefWidth="111.199951171875" text="Lecture ID" />
+                              <TableColumn fx:id="lecnamecol" prefWidth="236.00003051757812" text="Lecture Name" />
+                              <TableColumn fx:id="lecmailcol" prefWidth="305.5999755859375" text="Lecture E_mail" />
+                              <TableColumn fx:id="lecpasscol" minWidth="0.0" prefWidth="144.80010986328125" text="Lecture Password" />
+                              <TableColumn fx:id="lecconcol" prefWidth="164.5999755859375" text="Lecture Contact" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="626.0" layoutY="625.0" mnemonicParsing="false" onAction="#lecreset" prefHeight="25.0" prefWidth="152.0" style="-fx-background-color: #4ca0c2;" text="Reset Text" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="toaccountpane" layoutX="14.0" layoutY="16.0" prefHeight="742.0" prefWidth="1106.0" styleClass="root" stylesheets="@admin.css">
+                     <children>
+                        <Label layoutX="372.0" layoutY="35.0" prefHeight="43.0" prefWidth="505.0" text="Technical Officer Account Settings">
+                           <font>
+                              <Font name="System Bold Italic" size="29.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.19181287288665771" green="0.5069785714149475" blue="0.6315789222717285" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="78.0" layoutY="465.0" prefHeight="29.0" prefWidth="211.0" text="TO ID" textFill="WHITE" />
+                        <Label layoutX="78.0" layoutY="502.0" prefHeight="29.0" prefWidth="211.0" text="TO Name" textFill="WHITE" />
+                        <Label layoutX="78.0" layoutY="543.0" prefHeight="29.0" prefWidth="211.0" text="E-mail" textFill="WHITE" />
+                        <Label layoutX="78.0" layoutY="584.0" prefHeight="29.0" prefWidth="211.0" text="Password" textFill="WHITE" />
+                        <TextField fx:id="toid" layoutX="263.0" layoutY="467.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="toname" layoutX="263.0" layoutY="504.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="tomail" layoutX="263.0" layoutY="545.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="topass" layoutX="263.0" layoutY="584.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="tocon" layoutX="263.0" layoutY="625.0" prefHeight="25.0" prefWidth="259.0" />
+                        <Label layoutX="78.0" layoutY="623.0" prefHeight="29.0" prefWidth="211.0" text="Contact" textFill="WHITE" />
+                        <Button layoutX="626.0" layoutY="467.0" mnemonicParsing="false" onAction="#createtobtn" style="-fx-background-color: #4ca0c2;" text="Create TO Account" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="adminupdateaccount11" layoutX="624.0" layoutY="519.0" mnemonicParsing="false" onAction="#updatetobtn" style="-fx-background-color: #4ca0c2;" text="Update TO Account" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="admindeleteaccount11" layoutX="626.0" layoutY="572.0" mnemonicParsing="false" onAction="#deletetobtn" style="-fx-background-color: #4ca0c2;" text="Delete TO Account" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="totable" layoutX="78.0" layoutY="111.0" prefHeight="333.0" prefWidth="963.0">
+                           <columns>
+                              <TableColumn fx:id="toidcol" prefWidth="111.199951171875" text="TO ID" />
+                              <TableColumn fx:id="tonamecol" prefWidth="236.00003051757812" text="TO Name" />
+                              <TableColumn fx:id="tomailcol" prefWidth="305.5999755859375" text="TO E_mail" />
+                              <TableColumn fx:id="topasscol" minWidth="0.0" prefWidth="144.80010986328125" text="TO Password" />
+                              <TableColumn fx:id="toconcol" prefWidth="164.5999755859375" text="TO Contact" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="626.0" layoutY="625.0" mnemonicParsing="false" onAction="#toreset" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #4ca0c2;" text="Reset Text" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="adminaccountpane" layoutX="14.0" layoutY="15.0" prefHeight="742.0" prefWidth="1106.0" styleClass="root" stylesheets="@admin.css">
+                     <children>
+                        <Label layoutX="392.0" layoutY="34.0" prefHeight="34.0" prefWidth="334.0" text="Admin Account Settings">
+                           <font>
+                              <Font name="System Bold Italic" size="29.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.19181287288665771" green="0.5069785714149475" blue="0.6315789222717285" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="78.0" layoutY="465.0" prefHeight="29.0" prefWidth="211.0" text="Admin ID" textFill="WHITE" />
+                        <Label layoutX="78.0" layoutY="502.0" prefHeight="29.0" prefWidth="211.0" text="Admin Name" textFill="WHITE" />
+                        <Label layoutX="78.0" layoutY="543.0" prefHeight="29.0" prefWidth="211.0" text="E-mail" textFill="WHITE" />
+                        <Label layoutX="78.0" layoutY="584.0" prefHeight="29.0" prefWidth="211.0" text="Password" textFill="WHITE" />
+                        <TextField fx:id="aid" layoutX="263.0" layoutY="467.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="aname" layoutX="263.0" layoutY="504.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="amail" layoutX="263.0" layoutY="545.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="apass" layoutX="263.0" layoutY="584.0" prefHeight="25.0" prefWidth="259.0" />
+                        <TextField fx:id="acon" layoutX="263.0" layoutY="625.0" prefHeight="25.0" prefWidth="259.0" />
+                        <Label layoutX="78.0" layoutY="623.0" prefHeight="29.0" prefWidth="211.0" text="Contact" textFill="WHITE" />
+                        <Button layoutX="626.0" layoutY="467.0" mnemonicParsing="false" onAction="#createadminbtn" style="-fx-background-color: #4ca0c2;" text="Create Admin Account" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="adminupdateaccount1" layoutX="624.0" layoutY="519.0" mnemonicParsing="false" onAction="#updateadminbtn" style="-fx-background-color: #4ca0c2;" text="Update Admin Account" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="admindeleteaccount1" layoutX="626.0" layoutY="572.0" mnemonicParsing="false" onAction="#deleteadminbtn" style="-fx-background-color: #4ca0c2;" text="Delete Admin Account" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="admintable" layoutX="78.0" layoutY="111.0" prefHeight="333.0" prefWidth="963.0">
+                          <columns>
+                            <TableColumn fx:id="aidcol" prefWidth="111.199951171875" text="Admin ID" />
+                            <TableColumn fx:id="anamecol" prefWidth="236.00003051757812" text="Admin Name" />
+                              <TableColumn fx:id="amailcol" prefWidth="305.5999755859375" text="Admin E_mail" />
+                              <TableColumn fx:id="apasscol" minWidth="0.0" prefWidth="144.80010986328125" text="Admin Password" />
+                              <TableColumn fx:id="aconcol" prefWidth="164.5999755859375" text="Admin Contact" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="626.0" layoutY="625.0" mnemonicParsing="false" onAction="#adminreset" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #4ca0c2;" text="Reset Text" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="dashpane" prefHeight="800.0" prefWidth="1400.0" styleClass="root" stylesheets="@admin.css">
+         <children>
+            <Pane id="dash_prof" layoutX="441.0" layoutY="179.0" prefHeight="529.0" prefWidth="891.0" styleClass="dash_pane" stylesheets="@admin.css">
+               <children>
+                  <Button layoutX="52.0" layoutY="40.0" mnemonicParsing="false" onAction="#profile_settings" style="-fx-background-color: rgb(20,147,233);">
+                     <graphic>
+                        <ImageView fitHeight="171.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/user.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="485.0" layoutY="36.0" mnemonicParsing="false" onAction="#course_settings" prefHeight="132.0" prefWidth="104.0" style="-fx-background-color: rgb(20,147,233);">
+                     <graphic>
+                        <ImageView fitHeight="146.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/elearning.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="51.0" layoutY="282.0" mnemonicParsing="false" onAction="#timetable_settings" prefHeight="145.0" prefWidth="153.0" style="-fx-background-color: rgb(20,147,233);">
+                     <graphic>
+                        <ImageView fitHeight="141.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/timetable.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="486.0" layoutY="282.0" mnemonicParsing="false" onAction="#notice_settings" style="-fx-background-color: rgb(20,147,233);">
+                     <graphic>
+                        <ImageView fitHeight="145.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/bell.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Text layoutX="231.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile Settings" wrappingWidth="172.9999999999999">
+                     <font>
+                        <Font name="Bell MT Bold" size="29.0" />
+                     </font>
+                     <fill>
+                        <RadialGradient centerX="1.0" centerY="1.0" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.7803921699523926" green="0.7803921699523926" blue="0.7803921699523926" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Text>
+                  <Text layoutX="663.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Settings" wrappingWidth="172.9999999999999">
+                     <font>
+                        <Font name="Bell MT Bold" size="29.0" />
+                     </font>
+                     <fill>
+                        <RadialGradient centerX="1.0" centerY="1.0" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.7803921699523926" green="0.7803921699523926" blue="0.7803921699523926" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Text>
+                  <Text layoutX="245.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Timetable Settings" wrappingWidth="172.9999999999999">
+                     <font>
+                        <Font name="Bell MT Bold" size="29.0" />
+                     </font>
+                     <fill>
+                        <RadialGradient centerX="1.0" centerY="1.0" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.7803921699523926" green="0.7803921699523926" blue="0.7803921699523926" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Text>
+                  <Text layoutX="663.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notice Settings" wrappingWidth="172.9999999999999">
+                     <font>
+                        <Font name="Bell MT Bold" size="29.0" />
+                     </font>
+                     <fill>
+                        <RadialGradient centerX="1.0" centerY="1.0" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.7803921699523926" green="0.7803921699523926" blue="0.7803921699523926" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="546.0" layoutY="57.0" prefHeight="82.0" prefWidth="636.0">
+               <children>
+                  <Label layoutX="25.0" layoutY="28.0" prefHeight="67.0" prefWidth="587.0" text="ADMIN DASHBOARD">
+                     <font>
+                        <Font name="Bell MT Bold" size="56.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4646017952302916" centerY="0.9128787851694858" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.14000000059604645" green="1.0" blue="0.679719090461731" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="70.0" layoutY="57.0" prefHeight="686.0" prefWidth="289.0" styleClass="dash_pane" stylesheets="@admin.css">
+               <children>
+                  <Label layoutX="58.0" layoutY="28.0" prefHeight="36.0" prefWidth="173.0" text="ADMIN Profile">
+                     <font>
+                        <Font name="Bell MT Bold" size="25.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.39961013197898865" green="0.8631578683853149" blue="0.4845938980579376" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Button layoutX="58.0" layoutY="588.0" mnemonicParsing="false" onAction="#logOut" prefHeight="29.0" prefWidth="173.0" text="Logout" />
+                  <ImageView fitHeight="163.0" fitWidth="173.0" layoutX="63.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/profile_picture.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

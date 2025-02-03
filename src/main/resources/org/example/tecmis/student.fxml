@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="974.0" style="-fx-background-color: #0000; -fx-border-radius: 11px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tecmis.StudentController">
+   <children>
+      <AnchorPane id="root" layoutX="186.0" prefHeight="509.0" prefWidth="697.0">
+         <children>
+            <Pane id="dashboard" fx:id="dashboard" prefHeight="522.0" prefWidth="788.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+               <children>
+                  <Button contentDisplay="TOP" layoutX="587.0" layoutY="251.0" mnemonicParsing="false" onAction="#noticeBtn" prefHeight="97.0" prefWidth="181.0" style="-fx-background-color: #DDEDFF; -fx-background-radius: 10px;" text="Notice" textFill="#b5b5b5">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="56.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/bell.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="587.0" layoutY="91.0" mnemonicParsing="false" onAction="#timetableBtn" prefHeight="97.0" prefWidth="181.0" style="-fx-background-color: #DDEDFF; -fx-background-radius: 10px;" text="Timetable" textFill="#b5b5b5">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="62.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/timetable.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="325.0" layoutY="91.0" mnemonicParsing="false" onAction="#courseBtn" prefHeight="97.0" prefWidth="181.0" style="-fx-background-color: #DDEDFF; -fx-background-radius: 10px;" text="Course" textFill="#b5b5b5">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="56.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/elearning.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="54.0" layoutY="91.0" mnemonicParsing="false" onAction="#attendanceBtn" prefHeight="97.0" prefWidth="181.0" style="-fx-background-color: #DDEDFF; -fx-background-radius: 10px; -fx-background-image: url(&quot;use.png&quot;);" text="Attendance" textFill="#b5b5b5">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="58.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="325.0" layoutY="251.0" mnemonicParsing="false" onAction="#gpaBtn" prefHeight="97.0" prefWidth="181.0" style="-fx-background-color: #DDEDFF; -fx-background-radius: 10px;" text="GPA" textFill="#b5b5b5">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="56.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/grades%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="61.0" layoutY="251.0" mnemonicParsing="false" onAction="#medicalBtn" prefHeight="97.0" prefWidth="181.0" style="-fx-background-color: #DDEDFF; -fx-background-radius: 10px;" text="Medical" textFill="#b5b5b5">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="56.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/cardiology.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Pane prefHeight="522.0" prefWidth="188.0" style="-fx-background-color: #3BC3F2;" AnchorPane.bottomAnchor="-13.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button id="onHelloButtonClick" fx:id="onHelloButtonClick" layoutX="42.0" layoutY="425.0" mnemonicParsing="false" onAction="#logout" prefHeight="36.0" prefWidth="105.0" style="-fx-background-color: #3A8DF2; -fx-background-radius: 20px;" text="Logout" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Circle fx:id="profileimg" fill="DODGERBLUE" layoutX="95.0" layoutY="85.0" radius="71.0" stroke="BLACK" strokeType="INSIDE" />
+            <Button id="onHelloButtonClick" fx:id="onHelloButtonClick1" layoutX="42.0" layoutY="383.0" mnemonicParsing="false" onAction="#edit_profile" prefHeight="36.0" prefWidth="105.0" style="-fx-background-color: #3A8DA5; -fx-background-radius: 20px;" text="Edit Profile" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tecmis.Lecture.NoticeController">
+   <children>
+      <Label layoutX="304.0" layoutY="29.0" text="Notices" textFill="#23ea0d">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="noticeTable" layoutX="45.0" layoutY="62.0" prefHeight="200.0" prefWidth="592.0">
+        <columns>
+          <TableColumn fx:id="topic" prefWidth="144.80005264282227" text="Topic" />
+          <TableColumn fx:id="notice" prefWidth="347.9999237060547" text="Notice" />
+            <TableColumn fx:id="date2" prefWidth="98.39996337890625" text="Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

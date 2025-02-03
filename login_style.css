@@ -1,0 +1,30 @@
+.root{
+    -fx-background-image: url('./src/main/resources/org/example/tecmis/login_page/images/Background.jpg');
+    -fx-background-size: cover;
+    -fx-background-repeat: repeat;
+}
+
+.loginpane {
+    -fx-background-color: rgba(104, 157, 241, 0.7);
+    -fx-border-color: #ff00a0;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+    -fx-border-width: 5px;
+}
+
+.login_btn,.reset_btn {
+    -fx-background-color: #040445;
+    -fx-border-color: #edebf0;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-width: 3px;
+}
+
+.reset_btn:hover {
+    -fx-background-color: #689DF1B2;
+}
+
+.login_btn:hover {
+    -fx-background-color: #689DF1B2;
+}
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tecmis.Lecture.studentTable">
+   <children>
+      <TableView fx:id="studentsTable" layoutX="73.0" layoutY="70.0" prefHeight="527.0" prefWidth="816.0">
+        <columns>
+          <TableColumn fx:id="stIDColumn" prefWidth="92.0000228881836" text="Student ID" />
+          <TableColumn fx:id="stNColumn" prefWidth="163.20001220703125" text="Name" />
+            <TableColumn fx:id="stEcolumn" prefWidth="148.79998779296875" text="Email" />
+            <TableColumn fx:id="stCColumn" prefWidth="118.39999389648438" text="Contact" />
+            <TableColumn fx:id="stNICColumn" prefWidth="114.39996337890625" text="NIC" />
+            <TableColumn fx:id="stSColumn" prefWidth="96.0" text="Status" />
+            <TableColumn fx:id="stDColumn" prefWidth="90.39990234375" text="Dep ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="441.0" layoutY="39.0" text="Student Details" />
+   </children>
+</AnchorPane>

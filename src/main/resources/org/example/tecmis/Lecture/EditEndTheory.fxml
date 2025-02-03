@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tecmis.Lecture.EditETController">
+    <children>
+        <Label layoutX="112.0" layoutY="80.0" text="Student ID : " />
+        <Label layoutX="112.0" layoutY="111.0" text="Course ID : " />
+        <Label layoutX="112.0" layoutY="144.0" text=" " />
+        <Label layoutX="112.0" layoutY="178.0" text="New Marks : " />
+        <TextField fx:id="std" layoutX="181.0" layoutY="76.0" prefHeight="26.0" prefWidth="204.0" />
+        <TextField fx:id="crs" layoutX="182.0" layoutY="107.0" prefHeight="26.0" prefWidth="204.0" />
+        <TextField fx:id="newMark" layoutX="189.0" layoutY="174.0" prefHeight="26.0" prefWidth="196.0" />
+        <Button fx:id="save" layoutX="189.0" layoutY="236.0" mnemonicParsing="false" onAction="#saveMe" text="Save" />
+        <Button fx:id="cancelButton" layoutX="312.0" layoutY="236.0" mnemonicParsing="false" onAction="#cancelMe" text="Cancel" />
+        <Label fx:id="notify" layoutX="473.0" layoutY="120.0" prefHeight="18.0" prefWidth="196.0" textFill="#ef0707">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

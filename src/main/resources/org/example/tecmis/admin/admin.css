@@ -1,0 +1,13 @@
+.root {
+    -fx-background-color: #020041;
+}
+
+.dash_pane {
+    -fx-background-color: rgba(20,147,233,0.7);
+    -fx-border-color: #ffffff;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+    -fx-border-width: 3px;
+}
+
+

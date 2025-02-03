@@ -1,0 +1,47 @@
+/*.course{*/
+/*    -fx-background-color: #e6ece6;*/
+/*}*/
+
+/*!* styles.css *!*/
+/*.label {*/
+/*    -fx-text-fill: #f5fff5; !* Text color *!*/
+/*    -fx-font-size: 12px; !* Font size *!*/
+/*    -fx-font-family: "Arial"; !* Font family *!*/
+
+/*}*/
+
+
+.custom-vb{
+    -fx-background-color: #00ff80;
+    -fx-background-radius: 10px;
+    -fx-padding: 10px 0px 10px 10px;
+}
+.custom-label{
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.table-view {
+    -fx-background-color: #ffffff; /* Background color of the entire table */
+}
+
+
+
+.table-view .table-row-cell {
+    -fx-background-color: #ffffff; /* Background color of table rows */
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #d0d5d3; /* Background color of selected rows */
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #ffffff; /* Alternate row color */
+}
+.back_btn{
+    -fx-background-color: #3f7fe5;
+    -fx-padding: 10px;
+    -fx-border-radius: 13px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
